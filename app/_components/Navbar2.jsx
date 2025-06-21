@@ -11,7 +11,7 @@ export default function Navbar2() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: 'HOME', href: '/' },
+    { name: 'HOME', href: '#home' },
     { name: 'WORKS', href: '/works' },
     { name: 'ABOUT', href: '/about' },
     { name: 'OURTEAM', href: '#OurTeam' },
@@ -23,7 +23,9 @@ export default function Navbar2() {
       <nav className="flex justify-between items-center px-6 py-4   ">
         <div className="flex items-center gap-2">
           <Image src="/logo1.png" alt="Logo" width={70} height={70} />
-          <h1 className="font-bold text-3xl">CodeScope</h1>
+          <Link href="#home" className="font-bold text-3xl">
+          CodeScope
+          </Link>
         </div>
 
        
