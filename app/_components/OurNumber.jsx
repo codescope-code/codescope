@@ -3,7 +3,7 @@
 import CountUp from 'react-countup';
 export default function Ournumber() {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4 py-30 border-b-1 border-gray-700">
+    <div className="bg-black text-white flex items-center justify-center px-4 py-30 border-b-1 border-gray-700">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         {/* Stats Section */}
         <div className="grid grid-cols-2 gap-40">
