@@ -11,7 +11,7 @@ export default function Navbar2() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: 'HOME', href: '#home' },
+    { name: 'HOME', href: '/' },
     { name: 'WORKS', href: '/works' },
     { name: 'ABOUT', href: '/about' },
     { name: 'OURTEAM', href: '#OurTeam' },
