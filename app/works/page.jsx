@@ -59,7 +59,7 @@ export default function WorksPage() {
             Our Projects
           </h1>
           <div>
-            <div className="border-t border-white w-140 mb-4"></div>
+            <div className="border-t border-white w-100 mb-4"></div>
             <div className="flex justify-between">
               <span className="font-semibold text-sm">Works </span>
               <span className="text-sm text-white/70 font-medium mt-1">
@@ -76,7 +76,7 @@ export default function WorksPage() {
         {loading ? (
           <div className="text-center text-white/50">Loading...</div>
         ) : (
-          <div className="flex flex-col gap-2 mx-auto border-t-2 border-gray-600 pt-10">
+          <div className="flex flex-col gap-2 max-w-7xl mx-auto border-t-2 border-gray-600 pt-10">
             {projects.map((project, index) => (
               <div
                 key={index}
