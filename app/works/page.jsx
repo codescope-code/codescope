@@ -76,7 +76,7 @@ export default function WorksPage() {
         {loading ? (
           <div className="text-center text-white/50">Loading...</div>
         ) : (
-          <div className="flex flex-col gap-2 max-w-6xl mx-auto border-t-2 border-gray-600 pt-10">
+          <div className="flex flex-col gap-2 mx-auto border-t-2 border-gray-600 pt-10">
             {projects.map((project, index) => (
               <div
                 key={index}
