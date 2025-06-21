@@ -30,7 +30,7 @@ const WorkSection = () => {
 
   return (
     <section className="bg-black text-stone-100 py-28 px-6 border-b-2 border-gray-600">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <h2 className="text-4xl font-bold mb-24">LATEST CAMPAIGNS</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
           {campaigns.map((campaign, index) => (
