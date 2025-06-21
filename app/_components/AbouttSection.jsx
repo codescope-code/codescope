@@ -1,6 +1,6 @@
 export default function AbouttSection() {
   return (
-    <section className="bg-black text-white py-28 px-6 md:px-20 border-b border-gray-600 w-full">
+    <section className="bg-black text-white py-28 px-6 md:px-20 border-b border-gray-600">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* Left Title */}
         <div>
