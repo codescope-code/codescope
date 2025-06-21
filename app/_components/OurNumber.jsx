@@ -9,7 +9,7 @@ export default function Ournumber() {
         <div className="grid grid-cols-2 gap-40">
           <div>
             <h2 className="text-xl text-gray-400 mb-1">Founded</h2>
-            <p className="text-6xl font-bold">
+            <p className="text-5xl font-bold">
               <CountUp end={2024} duration={2}  separator="" />
             </p>
             <p className="text-sm text-gray-500 mt-2">Year of foundation</p>
