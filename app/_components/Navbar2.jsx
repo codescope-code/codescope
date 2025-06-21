@@ -18,7 +18,7 @@ export default function Navbar2() {
   ];
 
   return (
-    <div className="bg-black text-white font-sans fixed top-0 left-0 w-full z-50">
+    <div className="bg-black text-white font-sans fixed top-0 left-0 z-50">
       
       <nav className="flex justify-between items-center px-6 py-4   ">
         <div className="flex items-center gap-2">
