@@ -34,7 +34,7 @@ export default function Ournumber() {
           <div>
             <h2 className="text-xl text-gray-400 mb-1">Number of Users</h2>
             <p className="text-5xl font-bold">
-              <CountUp end={2021} duration={5}  separator="" />
+              <CountUp end={100} duration={5}  suffix="+"  />
             </p>
             <p className="text-sm text-gray-500 mt-2">Total users to date</p>
           </div>
