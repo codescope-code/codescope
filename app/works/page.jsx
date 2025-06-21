@@ -59,7 +59,7 @@ export default function WorksPage() {
             Our Projects
           </h1>
           <div>
-            <div className="border-t border-white w-100 mb-4"></div>
+            <div className="border-t border-white w-90 md:w-140 mb-4"></div>
             <div className="flex justify-between">
               <span className="font-semibold text-sm">Works </span>
               <span className="text-sm text-white/70 font-medium mt-1">
