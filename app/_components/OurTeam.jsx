@@ -1,5 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
-
+import Image from "next/image";
 const ourteam = [
   {
     name: "Ahmed Mahmoud",
@@ -37,7 +37,7 @@ export default function OurTeam() {
             key={index}
             className="relative group overflow-hidden rounded-2xl shadow-lg h-80 transition-all duration-500 transform hover:scale-110 hover:z-10"
           >
-            <img
+            <Image
               src={t.image}
               alt={t.name}
               className="w-full h-full object-cover transform transition-transform duration-500"
