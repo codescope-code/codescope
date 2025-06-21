@@ -23,7 +23,9 @@ export default function Navbar() {
       <nav className="flex justify-between items-center px-6 py-4   ">
         <div className="flex items-center gap-2">
           <Image src="/logo1.png" alt="Logo" width={70} height={70} />
+          <Link href="html">
           <h1 className="font-bold text-3xl">CodeScope</h1>
+          </Link>
         </div>
 
        
