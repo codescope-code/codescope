@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return(
-         <div className="bg-black text-white font-sans">
+         <div className="bg-black text-white font-sans"id="#home">
              <section className="px-6 md:px-12 pt-60 pb-20 border-b border-gray-600">
           <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold leading-tight">
             <span className="text-primary block text-green-400 text-7xl">Turning Data into Insight,</span>
