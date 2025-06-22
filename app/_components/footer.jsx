@@ -37,7 +37,7 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="https://www.instagram.com/codescope.tech?igsh=MXRud2gyajc2ZWFoZg==">Instagram</Link></li>
               <li><Link href="#">LinkedIn</Link></li>
-              <li><Link href="#">Facebook</Link></li>
+              <li><Link href="https://www.facebook.com/profile.php?id=61576769524195">Facebook</Link></li>
             </ul>
           </div>
 
