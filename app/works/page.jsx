@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Navbar from "../_components/Navbar";
+import Footer from "../_components/Footer";
 
 function Carousel({ images }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -123,6 +124,7 @@ export default function WorksPage() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
