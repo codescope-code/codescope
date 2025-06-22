@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: 'HOME', href: '/' },
     { name: 'WORKS', href: '/works' },
     { name: 'ABOUT', href: '/about' },
-    { name: 'CONTACT', href: '#Contact' },
+    { name: 'CONTACT', href: '/#Contact' },
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="flex justify-between items-center px-6 py-4   ">
         <div className="flex items-center gap-2">
           <Image src="/logo1.png" alt="Logo" width={70} height={70} />
-          <Link href="#home" className="font-bold text-3xl">
+          <Link href="/" className="font-bold text-3xl">
           CodeScope
           </Link>
         </div>
