@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-2">Follow Us</h3>
             <ul className="space-y-1">
-              <li><Link href="#">Instagram</Link></li>
+              <li><Link href="https://www.instagram.com/codescope.tech?igsh=MXRud2gyajc2ZWFoZg==">Instagram</Link></li>
               <li><Link href="#">LinkedIn</Link></li>
               <li><Link href="#">Facebook</Link></li>
             </ul>
@@ -54,10 +54,10 @@ export default function Footer() {
         </div>
       <div className="text-center  pt-12">      
           <div className="flex justify-center items-center space-x-6 text-2xl text-black">
-            <Link href="#"><FaInstagram /></Link>
-            <Link href="#"><FaFacebookF /></Link>
+            <Link href="https://www.instagram.com/codescope.tech?igsh=MXRud2gyajc2ZWFoZg=="><FaInstagram /></Link>
+            <Link href="https://www.facebook.com/profile.php?id=61576769524195"><FaFacebookF /></Link>
             <Link href="#"><FaLinkedinIn /></Link>
-            <Link href="#"><FaYoutube /></Link>
+            <Link href="https://youtube.com/@codescope_tech?si=KXcj7_o2DoXozjpa"><FaYoutube /></Link>
           </div>
         </div>
         <div className="mt-12 border-t pt-4 text-sm text-gray-500">
