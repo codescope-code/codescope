@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Navbar from "../_components/Navbar";
-import Footer from "../_components/Footer";
+import Footer from "../_components/footer";
 
 function Carousel({ images }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
