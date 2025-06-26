@@ -51,7 +51,7 @@ export default function WorksPage() {
         "/BRS4.jpg",
         "/BRS5.jpg",
         "/BRS6.jpg",
-        "/BRS7.jpg",
+        
       ],
     },
     {
