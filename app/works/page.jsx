@@ -15,7 +15,7 @@ function Carousel({ images }) {
   }, [images]);
 
   return (
-    <div className="w-full h-80 md:h-80 relative overflow-hidden rounded-xl shadow-lg">
+    <div className="w-full h-84 md:h-84 relative overflow-hidden rounded-xl shadow-lg">
       <Image
         src={images[currentImageIndex]}
         alt="Project Screenshot"
