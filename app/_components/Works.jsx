@@ -34,7 +34,7 @@ export default function WorkSection() {
               {/* التدرج والنص */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 p-4 sm:p-6 w-full flex flex-col items-start text-left">
-                <h3 className="text-lg sm:text-xl font-semibold mb-1 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                <h3 className="text-lg sm:text-xl font-semibold mb-1 transition-all duration-500 translate-y-6 opacity-100 group-hover:opacity-100 group-hover:translate-y-0">
                   {campaign.title}
                 </h3>
                 <a href="/works">
