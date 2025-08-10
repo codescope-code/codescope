@@ -17,7 +17,7 @@ function Carousel({ images, onOpen }) {
     stop();
     timerRef.current = setInterval(() =>
       setIdx((i) => (i + 1) % images.length),
-    4000);
+    2500);
   }
   function stop() {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -31,7 +31,7 @@ function Carousel({ images, onOpen }) {
 
   return (
     <div
-      className="relative h-64 md:h-72 overflow-hidden rounded-xl bg-neutral-900"
+      className="relative h-48 sm:h-64 md:h-72 overflow-hidden rounded-xl bg-neutral-900"
       onMouseEnter={stop}
       onMouseLeave={start}
     >
@@ -48,7 +48,7 @@ function Carousel({ images, onOpen }) {
             src={images[idx]}
             alt={`slide-${idx}`}
             fill
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full cursor-pointer"
             onClick={() => onOpen(idx)}
           />
         </motion.div>
@@ -102,12 +102,12 @@ function Modal({ open, images, startIndex, onClose }) {
 
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-6">
       <div className="w-full max-w-4xl bg-[#0b0b0b] rounded-xl overflow-hidden shadow-2xl">
-        <div className="relative h-96">
+        <div className="relative h-60 sm:h-80 md:h-96">
           <Image src={images[index]} alt={`modal-${index}`} fill className="object-contain bg-black" />
         </div>
-        <div className="p-4 flex items-center justify-between">
+        <div className="p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <button onClick={() => setIndex((i) => (i - 1 + images.length) % images.length)} className="p-2 rounded-md text-black bg-green-400 hover:bg-green-500 ">Prev</button>
             <button onClick={() => setIndex((i) => (i + 1) % images.length)} className="p-2 rounded-md text-black bg-green-400 hover:bg-green-500 ">Next</button>
@@ -170,39 +170,41 @@ export default function WorksPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-black text-white px-6 py-20">
+      <div className="bg-black text-white px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8 py-23">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4 py-20">
             <div>
-              <h1 className="text-4xl font-bold">Our Projects</h1>
-              <p className="text-white/60 mt-2 max-w-xl">A curated selection of work showing design, development and product thinking. Click a project to view images.</p>
+              <h1 className="text-3xl sm:text-4xl font-bold">Our Projects</h1>
+              <p className="text-white/60 mt-2 max-w-xl text-sm sm:text-base">
+                A curated selection of work showing design, development and product thinking. Click a project to view images.
+              </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide">
               {tags.map(t => (
                 <button
                   key={t}
                   onClick={() => setFilter(t)}
-                  className={`px-3 py-2 rounded-full text-sm transition ${filter === t ? 'bg-green-400 text-black' : 'bg-white/5 text-white/80 hover:bg-green-400'}`}
+                  className={`flex-shrink-0 px-3 py-2 rounded-full text-sm transition ${filter === t ? 'bg-green-400 text-black' : 'bg-white/5 text-white/80 hover:bg-green-400'}`}
                 >{t}</button>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
             {visible.map((project) => (
               <motion.div layout key={project.id} className="bg-[#0d0d0d] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
                 <div className="p-4">
                   <div className="mb-4">
                     <Carousel images={project.images} onOpen={(i) => openProjectModal(project, i)} />
                   </div>
-                  <div className="flex justify-between items-start gap-4">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
-                      <h2 className="text-xl font-semibold">{project.title}</h2>
-                      <p className="text-sm text-white/70 mt-2">{project.description}</p>
+                      <h2 className="text-lg sm:text-xl font-semibold">{project.title}</h2>
+                      <p className="text-xs sm:text-sm text-white/70 mt-2">{project.description}</p>
                     </div>
                     <div className="flex flex-col items-end gap-2">
                       <div className="text-xs text-white/60">{project.tags.join(' • ')}</div>
-                      <button onClick={() => openProjectModal(project)} className="text-sm bg-green-500 hover:bg-green-400 text-black  px-3 py-1 rounded">View</button>
+                      <button onClick={() => openProjectModal(project)} className="text-sm bg-green-500 hover:bg-green-400 text-black px-3 py-1 rounded">View</button>
                     </div>
                   </div>
                 </div>
