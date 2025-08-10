@@ -19,7 +19,7 @@ export default function WorkSection() {
           {campaigns.map((campaign, index) => (
             <div
               key={index}
-              className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="group relative rounded-xl overflow-hidden shadow-lg hover:opacity-75 transition-all duration-500"
             >
               {/* الصورة */}
               <div className="relative aspect-[16/9] sm:aspect-[14/7] w-full">
