@@ -31,7 +31,7 @@ function Carousel({ images, onOpen }) {
 
   return (
     <div
-      className="relative h-48 sm:h-64 md:h-72 overflow-hidden rounded-xl bg-neutral-900"
+      className="relative aspect[16/9] h-48 sm:h-64 md:h-72 overflow-hidden rounded-xl bg-neutral-900"
       onMouseEnter={stop}
       onMouseLeave={start}
     >
@@ -45,12 +45,12 @@ function Carousel({ images, onOpen }) {
           className="absolute inset-0"
         >
           <Image
-            src={images[idx]}
-            alt={`slide-${idx}`}
-            fill
-            className="object-cover w-full h-full cursor-pointer"
-            onClick={() => onOpen(idx)}
-          />
+                src={images[idx]}
+                alt={`slide-${idx}`}
+                fill
+                className="w-full h-full cursor-pointer object-contain sm:object-cover"
+                onClick={() => onOpen(idx)}
+        />
         </motion.div>
       </AnimatePresence>
 
