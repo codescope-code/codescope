@@ -1,54 +1,47 @@
 import Image from 'next/image';
 
-const WorkSection = () => {
+export default function WorkSection() {
   const campaigns = [
-    {
-      title: "VuDu",
-      image: "/Project1.jpg", // Replace with your image path
-    },
-    {
-      title: "Gravity falls",
-      image: "/Project2.jpg", // Replace with your image path
-    },
-    {
-      title: "Brain Storm",
-      image: "/Project3.jpg", // Replace with your image path
-    },
-    {
-      title: "Arcade",
-      image: "/Project4.png", // Replace with your image path
-    },
-    // {
-    //   title: "Brand Collaboration",
-    //   image: "/images/brand-collab.jpg", // Replace with your image path
-    // },
-    // {
-    //   title: "Event Promotion",
-    //   image: "/images/event-promo.jpg", // Replace with your image path
-    // },
+    { title: "VuDu", image: "/Project1.jpg" },
+    { title: "Gravity falls", image: "/Project2.jpg" },
+    { title: "Brain Storm", image: "/Project3.jpg" },
+    { title: "Arcade", image: "/Project4.png" },
   ];
 
   return (
-    <section className="bg-black text-stone-100 py-28 px-6 border-b-2 border-gray-600">
-      <div>
-        <h2 className="text-4xl font-bold mb-24">LATEST CAMPAIGNS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+    <section className="bg-black text-white py-20 px-4 sm:px-6 border-b border-gray-800">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center tracking-tight">
+          LATEST CAMPAIGNS
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {campaigns.map((campaign, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
             >
-              <div className="relative w-full h-64">
+              {/* الصورة */}
+              <div className="relative aspect-[16/9] sm:aspect-[14/7] w-full">
                 <Image
                   src={campaign.image}
                   alt={campaign.title}
                   fill
-                  style={{ objectFit: 'cover' }}
-                  className="transition-transform duration-300 hover:scale-105"
+                  className="object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-4 bg-green-400">
-                <h3 className="text-xl font-semibold">{campaign.title}</h3>
+
+              {/* التدرج والنص */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-0 p-4 sm:p-6 w-full flex flex-col items-start text-left">
+                <h3 className="text-lg sm:text-xl font-semibold mb-1 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                  {campaign.title}
+                </h3>
+                <a href="/works">
+                  <span className="text-sm text-gray-300 transition-all duration-500 delay-75 opacity-0 group-hover:opacity-100">
+                    View Project →
+                  </span>
+                </a>
               </div>
             </div>
           ))}
@@ -56,6 +49,4 @@ const WorkSection = () => {
       </div>
     </section>
   );
-};
-
-export default WorkSection;
+}
